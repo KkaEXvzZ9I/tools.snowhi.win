@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>YouTube縮圖下載</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Common Tags -->
+    <meta content='#ffffff' name='theme-color' />
+    <meta name="google-site-verification" content="0yDUo8-uyoewyaf5iw2w1qXf2T0qL-hF4cMY2Ji9STI" />
+
+    <meta name="keywords"
+        content="YouTube, YouTube Thumbnail Downloader, Thumbnail Downloader, Thumbnails, Download Thumbnails, Download YouTube Thumbails, YouTube Video Thumbnail Downloader, Youtube Thumbnail Downloader, YT, YT Thumbnail Downloader, Youtube Thumbnail Downloader HD, YouTube Thumbnail Downloader Online, Clean and Simple YouTube Thumbnail Downloader, CLean and Simple, YouTube Thumbnails, YouTube HD Thumbnail Downloader, High Definition Thumbnail Downoader, YT Thumbnail Research, Download YouTube Thumbnail, Download YouTube Thumbnails Easily, Harsh Trivedi">
+
+    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta property="og:title" content="YouTube Thumbnail Downloader" />
+    <meta property="og:description"
+        content="Download YouTube video thumbnails with ease. Free, Clean & Simple YouTube Thumbnail Downloader for you." />
+    <meta property="og:image"
+        content="https://raw.github.com/harsh98trivedi/YouTube-Thumbnail-Downloader/master/images/meta.jpg" />
+    <meta property="og:url" content="https://harsh98trivedi.github.io/YouTube-Thumbnail-Downloader/" />
+    <meta property="og:site_name" content="YouTube Thumbnail Downloader" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="fb:admins" content="245221532650178" />
+    <meta property="og:type" content="website" />
+    <meta content='https://www.facebook.com/TheHarshTrivedi' property='article:author' />
+    <meta property="og:url" content="https://harsh98trivedi.github.io/YouTube-Thumbnail-Downloader/" />
+    <!-- Search Engine -->
+    <meta property="description"
+        content="Download YouTube video thumbnails with ease. Free, Clean & Simple YouTube Thumbnail Downloader for you." />
+    <meta property="image"
+        content="https://raw.github.com/harsh98trivedi/YouTube-Thumbnail-Downloader/master/images/meta.jpg" />
+    <!-- Schema.org for Google -->
+    <meta itemprop="name" content="YouTube Thumbnail Downloader" />
+    <meta itemprop="description"
+        content="Download YouTube video thumbnails with ease. Free, Clean & Simple YouTube Thumbnail Downloader for you." />
+    <meta itemprop="image"
+        content="https://raw.github.com/harsh98trivedi/YouTube-Thumbnail-Downloader/master/images/meta.jpg" />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="YouTube Thumbnail Downloader" />
+    <meta property="twitter:description"
+        content="Download YouTube video thumbnails with ease. Free, Clean & Simple YouTube Thumbnail Downloader for you." />
+    <meta property="twitter:creator" content="@harsh98trivedi" />
+    <meta property="twitter:creator:id" content="@harsh98trivedi" />
+    <meta property="twitter:image:src"
+        content="https://raw.github.com/harsh98trivedi/YouTube-Thumbnail-Downloader/master/images/meta.jpg" />
+    <meta property="twitter:image" content="YouTube Thumbnail Downloader | Download YouTube thumbnails with ease." />
+
+    <link rel='icon' type='image/x-icon' href='images/icon.png' />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:500" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-70447982-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-70447982-2');
+    </script>
+
+</head>
+
+<body>
+    <nav class="navbar container-fluid site-gradient text-center" id="nav">
+        <a style="outline:none;" id="header-links"
+            href="https://harsh98trivedi.github.io/YouTube-Thumbnail-Downloader/">
+            <h1 id="header">YouTube縮圖下載</h1>
+        </a>
+    </nav>
+
+    <br>
+
+    <div class="container text-center" id="main">
+        <div id="result" class="hidden">
+            <!-- THUMBNAIL PREVIEW -->
+            <img class="shadow" id="thumbnailpreview" src="images/placeholder.gif"
+                onerror="this.style.display='none'" />
+            <!-- THUMBNAIL PREVIEW -->
+            <hr style="width:50vw;">
+            <!-- INPUT AREA -->
+            <div class="input-group">
+                <input id="ytlink" autofocus type="text" class="form-control shadow"
+                    placeholder="在此處輸入YouTube影片網址" spellcheck="false"
+                    onsubmit="youtube_thumbnail_downloader(ytlink.value);ShowMain()" autocomplete="off" />
+            </div>
+            <button id="thumbdloadbtn" class="thumbdloadbtn site-gradient" type="button"
+                onclick="youtube_thumbnail_downloader(ytlink.value);ShowMain()">取得</button>
+            <!-- INPUT AREA -->
+
+            <!-- Download Buttons -->
+            <div id="download-buttons">
+                <a target="_blank" id="thumbnailhq" download><button class="thumbdloadbtn site-gradient shadow">高質量</button></a>
+                <br>
+                <a target="_blank" id="thumbnailmq" download><button class="thumbdloadbtn site-gradient shadow">中等質量</button></a>
+                <br>
+                <a target="_blank" id="thumbnaillq" download><button class="thumbdloadbtn site-gradient shadow">低質量</button></a>
+                <br>
+                <a onclick="location.reload();"><button
+                        class="thumbdloadbtn site-gradient shadow">重新加載</button></a>
+            </div>
+            <!-- Download Buttons -->
+        </div>
+    </div>
+
+    <footer id="footer" class="site-gradient container-fluid text-center">
+        <div id="social-media">
+        </div>
+        <hr style="background: #ffffff; width: 50vw; opacity: 0.25;">
+        <p style="display: inline;">RedFox Studio &#169; 2019-<script>document.write(new Date().getFullYear())</script>  &#8212; All rights reserved.</p>
+    </footer>
+
+    <script src="js/jquery3.3.1.min.js"></script>
+    <script src="js/thumbnail.js"></script>
+
+    <script type="text/javascript">
+        // Replace source
+        $('img').error(function () {
+            $(this).attr('src', '#.png');
+        });
+
+        // Or, hide them
+        $("img").error(function () {
+            $(this).hide();
+        });
+    </script>
+    <script>
+        $('#ytlink').keydown(function (e) {
+            var keyCode = (e.keyCode ? e.keyCode : e.which);
+            if (keyCode == 13) {
+                $('#thumbdloadbtn').trigger('click');
+            }
+        });
+    </script>
+    <script>
+        $("#preview div").hide();
+        $("#preview");
+    </script>
+
+    <script>
+        var realImage = document.getElementById('thumbnailpreview');
+        var loadingImage = document.getElementById('loadingImage');
+        loadingImage.style.display = 'inline';
+        realImage.style.display = 'none';
+
+        // Create new image
+        var imgPreloader = new Image();
+        // define onload (= image loaded)
+        imgPreloader.onload = function () {
+            realImage.src = imgPreloader.src;
+            realImage.style.display = 'inline';
+            loadingImage.style.display = 'none';
+        };
+        // set image source
+        imgPreloader.src = 'images/placeholder.gif';
+    </script>
+
+</body>
+
+<script async src="https://arc.io/widget.min.js#uf1ooHB1"></script>

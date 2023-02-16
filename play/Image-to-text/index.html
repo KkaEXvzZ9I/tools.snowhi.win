@@ -1,0 +1,56 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="最方便的圖片轉文字網站 , 等你使用!">
+	<title>圖片轉文字</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="braille.js"></script>
+	<script src="dithering.js"></script>
+	<script src="main.js"></script>
+	<link rel="shortcut icon" href="icon.png">
+</head>
+<body>
+	<textarea id="text" readonly></textarea>
+	<div id="options">
+		<div><a href="https://github.com/Tira-tw/Image-to-text" target="_blank">源代碼</a></div>
+		<div><input id="file" type="file" accept="image/*"></div>
+
+		<div title="Dark 背景"><input type="checkbox" id="darktheme"> Dark 背景</div>
+		<div title="填滿"><input type="checkbox" id="inverted"> 填滿</div>
+		<div title="稍微調整"><input type="checkbox" id="dithering"> 稍微調整</div>
+		<div title="去除背景"><input type="checkbox" id="monospace"> 去除背景</div>
+    <div title="Mod">
+			<select id="greyscale_mode">
+        <option value="luminance">預設</option>
+        </select>
+    </div>
+		<div>
+			<input type="number" min="2" value="50" step="2" max="500" id="width">
+			大小
+		</div>
+		<div>
+			<button id="clipboard">複製</button>
+		</div>
+		<div>
+		</div>
+	</div>
+</body>
+</html>
+<!---------------------------- 社群 ------------------------------>
+<html>
+<body>
+<form>
+    <a href="https://www.facebook.com/DJ.Tira.tw">
+        <input type="button" value="Facebook"> <br>
+      <a href="https://discord.gg/D9hWKmest8">
+        <input type="button" value="Discord"> <br>
+        <a href="https://www.youtube.com/c/Tiratw/">
+        <input type="button" value="YouTube"> <br>
+        <a href="https://thisalesa.eu.org">
+        <input type="button" value="官網">
+    </a>
+</form>
+</body>
+</html>
+
+<script async src="https://arc.io/widget.min.js#uf1ooHB1"></script>

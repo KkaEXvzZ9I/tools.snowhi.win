@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="shortcut icon" href="icon.png">
+
+    <!-- TITLE-->
+    <title>密碼產生器</title>
+
+    <!-- SEO -->
+    <meta name="Password Generator" content="Use this app to generate a safe and secure random password">
+    <meta name="keywords"  content="password, safe, secure, random, generator, application">
+
+    <!-- CSS STYLESHEET LINKS -->
+    <link rel="stylesheet" href="./Assets/CSS/style.css" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@500&family=Lato&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    
+  </head>
+  <body>
+
+    <!-- CONTENT WRAPPER -->
+    <div class="wrapper">
+
+      <!-- APPLICATION HEADER -->
+      <header>
+        <h1>密碼產生器</h1>
+      </header>
+
+
+      <!-- CARD PARENT CONTAINER -->
+      <div class="card" aria-role="group">
+
+        <!-- CARD HEADER -->
+        <div class="card-header">
+          <h2>生成密碼</h2>
+          <p>通過添加特殊字符、數字、大寫和小寫字母使您的密碼更加強大!</p>
+        </div>
+
+        <!-- CARD BODY -->
+        <div class="card-body">
+          <textarea
+            readonly
+            id="password"
+            placeholder="您的安全密碼"
+            aria-label="生成的密碼"
+          ></textarea>
+        </div>
+
+        <!-- CARD FOOTER -->
+        <div class="card-footer">
+          <button id="generate" class="btn" aria-label="generatePassword" aria-describedby="generatePasswordPrompt">生成密碼 <span style="color: white; size: 20px; padding-left: 8px;"><i class="fas fa-key" role="img" aria-label="Password key"></i></span></button>
+          <button id="copy" class="btn-secondary" aria-label="copy" aria-describedby="copyPassword">複製到剪貼板 <span style="color: white; size: 20px; padding-left: 8px;"><i class="fas fa-copy" role="img" aria-label="Copy to clipboard"></i></span></button>
+        </div>
+
+
+      </div>
+    </div>
+
+    <!-- LINK TO JAVASCRIPT FILE -->
+    <script src="./Assets/Javascript/script.js"></script>
+  </body>
+</html>
+
+<script async src="https://arc.io/widget.min.js#uf1ooHB1"></script>
